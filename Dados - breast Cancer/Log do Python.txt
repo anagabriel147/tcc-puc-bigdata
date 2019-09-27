@@ -1,0 +1,79 @@
+C:\Users\agabriel\AppData\Local\Programs\Python\Python37-32\python.exe E:/Phyton/kmeans_com_vinho_e_brestcancer2/com/study/kmeans_breast_cancer.py
+-------------------------------------------------------------------
+INFORMAÇÕES DO DATASET :
+Numero de Linhas X Colunas (699, 11)
+Quantidade de valores faltantes agrupados por coluna :
+	Id: 0
+	Cl.thickness: 0
+	Cell.size: 0
+	Cell.shape: 0
+	Marg.adhesion: 0
+	Epith.c.size: 0
+	Bare.nuclei: 16
+	Bl.cromatin: 0
+	Normal.nucleoli: 0
+	Mitoses: 0
+	Class: 0
+*** linhas com valores faltantes serão removidas do dataframe
+
+Quantidade de linhas no Dataframe antes da remoção de valores faltantes = 699
+Quantidade de linhas no Dataframe após o discarte de valores faltantes = 683
+-------------------------------------------------------------------
+-------------------------------------------------------------------
+Tipo de dados das colunas Id                   int64
+Cl.thickness         int64
+Cell.size            int64
+Cell.shape           int64
+Marg.adhesion        int64
+Epith.c.size         int64
+Bare.nuclei        float64
+Bl.cromatin          int64
+Normal.nucleoli      int64
+Mitoses              int64
+Class                int64
+dtype: object
+Dados estatísticos sobre o Dataframe
+                 count          mean  ...        75%         max
+Id               683.0  1.076720e+06  ...  1238705.0  13454352.0
+Cl.thickness     683.0  4.442167e+00  ...        6.0        10.0
+Cell.size        683.0  3.150805e+00  ...        5.0        10.0
+Cell.shape       683.0  3.215227e+00  ...        5.0        10.0
+Marg.adhesion    683.0  2.830161e+00  ...        4.0        10.0
+Epith.c.size     683.0  3.234261e+00  ...        4.0        10.0
+Bare.nuclei      683.0  3.544656e+00  ...        6.0        10.0
+Bl.cromatin      683.0  3.445095e+00  ...        5.0        10.0
+Normal.nucleoli  683.0  2.869693e+00  ...        4.0        10.0
+Mitoses          683.0  1.603221e+00  ...        1.0        10.0
+Class            683.0  3.499268e-01  ...        1.0         1.0
+
+[11 rows x 8 columns]
+-------------------------------------------------------------------
+Separando o Dataframe em partes para treinamento e teste
+Numero de LINHAS X COLUNAS do arquivo de treinamento com 80% (546, 11)
+Numero de LINHAS X COLUNAS do arquivo de teste com 20% (117, 11)
+-------------------------------------------------------------------
+Canceres agrupados por benigno ou malígno do dataFrame total
+0    444
+1    239
+Name: Class, dtype: int64
+
+Canceres agrupados por benigno ou malígno do dataFrame de treinamento
+0    356
+1    190
+Name: Class, dtype: int64
+
+Canceres agrupados por benigno ou malígno do dataFrame de teste
+0    70
+1    47
+Name: Class, dtype: int64
+-------------------------------------------------------------------------------------------------------
+Numero de acertos ( Acuracia ) do total de 117 amostras :  107 - 91.45%
+-------------------------------------------------------------------------------------------------------
+Matriz de Confusão
+Predicted   0   1
+Actual           
+0          69   1
+1           9  38
+-------------------------------------------------------------------------------------------------------
+
+Process finished with exit code 0

@@ -1,0 +1,112 @@
+C:\Users\agabriel\AppData\Local\Programs\Python\Python37-32\python.exe E:/Phyton/kmeans_com_vinho_e_brestcancer2/com/study/kmeans_wine.py
+-------------------------------------------------------------------
+INFORMAÇÕES DO DATASET :
+Numero de Linhas X Colunas (4898, 12)
+Quantidade de valores faltantes agrupados por coluna :
+	fixed acidity: 0
+	volatile acidity: 0
+	citric acid: 0
+	residual sugar: 0
+	chlorides: 0
+	free sulfur dioxide: 0
+	total sulfur dioxide: 0
+	density: 0
+	pH: 0
+	sulphates: 0
+	alcohol: 0
+	quality: 0
+*** linhas com valores faltantes serão removidas do dataframe
+
+-------------------------------------------------------------------
+Tipo de dados das colunas fixed acidity           float64
+volatile acidity        float64
+citric acid             float64
+residual sugar          float64
+chlorides               float64
+free sulfur dioxide     float64
+total sulfur dioxide    float64
+density                 float64
+pH                      float64
+sulphates               float64
+alcohol                 float64
+quality                   int64
+dtype: object
+Dados estatísticos sobre o Dataframe
+                       count        mean  ...       75%        max
+fixed acidity         4898.0    6.854788  ...    7.3000   14.20000
+volatile acidity      4898.0    0.278241  ...    0.3200    1.10000
+citric acid           4898.0    0.334192  ...    0.3900    1.66000
+residual sugar        4898.0    6.391415  ...    9.9000   65.80000
+chlorides             4898.0    0.045772  ...    0.0500    0.34600
+free sulfur dioxide   4898.0   35.308085  ...   46.0000  289.00000
+total sulfur dioxide  4898.0  138.360657  ...  167.0000  440.00000
+density               4898.0    0.994027  ...    0.9961    1.03898
+pH                    4898.0    3.188267  ...    3.2800    3.82000
+sulphates             4898.0    0.489847  ...    0.5500    1.08000
+alcohol               4898.0   10.514267  ...   11.4000   14.20000
+quality               4898.0    5.877909  ...    6.0000    9.00000
+
+[12 rows x 8 columns]
+-------------------------------------------------------------------
+Separando o Dataframe em partes para treinamento e teste
+Numero de LINHAS X COLUNAS do arquivo de treinamento com 80% (3918, 13)
+Numero de LINHAS X COLUNAS do arquivo de teste com 20% (980, 13)
+-------------------------------------------------------------------
+Qualidades de vinho do dataFrame total
+6    2198
+5    1457
+7     880
+8     175
+4     163
+3      20
+9       5
+Name: quality, dtype: int64
+
+Qualidades de vinho do dataFrame de treinamento
+6    1726
+5    1211
+7     704
+8     135
+4     124
+3      15
+9       3
+Name: quality, dtype: int64
+
+Qualidades de vinho do dataFrame de teste
+6    472
+5    246
+7    176
+8     40
+4     39
+3      5
+9      2
+Name: quality, dtype: int64
+Quantidade de vinhos agrupados por nota de qualidade
+6    2198
+5    1457
+7     880
+8     175
+4     163
+3      20
+9       5
+Name: quality, dtype: int64
+-------------------------------------------------------------------------------------------------------
+Numero de acertos do total de 980 vinhos :  120 - 12.24%
+Numero de acertos com zero : 120 - 12.24%
+Numero de acertos com zero ou um : 250 - 25.51%
+Numero de acertos com zero ou um ou dois : 329 - 33.57%
+Numero de acertos com zero ou um ou dois ou tres : 498 - 50.82%
+-------------------------------------------------------------------------------------------------------
+Matriz de Confusão
+Predicted   0   1   2   3   4  5   6
+Actual                              
+3           1   0   2   0   2  0   0
+4           7   4   2   3  21  0   2
+5          57  44  62  34  32  9   8
+6          96  65  88  98  26  9  90
+7          32  12  12  44   2  0  74
+8           4   1   6  11   3  0  15
+9           0   0   0   0   0  0   2
+-------------------------------------------------------------------------------------------------------
+
+Process finished with exit code 0
